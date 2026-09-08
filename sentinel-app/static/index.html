@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SENTINEL — From Scattered Data to Actionable Intelligence</title>
+<link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="logo">SENTINEL</span>
+    <span class="tagline">From scattered data to actionable intelligence</span>
+  </div>
+  <div class="case" id="case-summary">loading…</div>
+</header>
+
+<main>
+  <section class="panel copilot">
+    <h2>Investigation Copilot</h2>
+    <p class="sub">Cross-domain signal fusion — evidence-backed leads, investigator stays in control.</p>
+    <div id="leads"></div>
+  </section>
+
+  <section class="panel graph">
+    <div class="panel-head">
+      <h2>Relationship graph</h2>
+      <span class="hint">click a link to see why two entities are connected</span>
+    </div>
+    <svg id="graph" viewBox="0 0 640 460" preserveAspectRatio="xMidYMid meet"></svg>
+    <div id="edge-explain" class="explain empty">Select a relationship to explain it.</div>
+  </section>
+
+  <section class="panel replay">
+    <div class="panel-head">
+      <h2>Incident replay</h2>
+      <div class="controls">
+        <button id="replay-play">▶ Start replay</button>
+        <button id="replay-reset" class="ghost">Reset</button>
+      </div>
+    </div>
+    <div id="replay-clock" class="clock">—</div>
+    <ol id="replay-list"></ol>
+  </section>
+
+  <section class="panel brief">
+    <div class="panel-head">
+      <h2>Investigation brief</h2>
+      <button id="brief-btn">🧠 Generate investigation brief</button>
+    </div>
+    <div id="brief" class="empty">Pick a lead, then generate the brief.</div>
+  </section>
+</main>
+
+<footer>
+  Decision support only — SENTINEL surfaces evidence-backed investigative leads, never determinations of guilt.
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
